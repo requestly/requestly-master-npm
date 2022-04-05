@@ -1,0 +1,38 @@
+{
+  "name": "requestly-master",
+  "version": "1.0.0",
+  "description": "Requestly extension and other components",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "http-server -p 3000",
+    "deploy-beta": "./build.sh beta && firebase deploy --only hosting -P requestly-beta",
+    "prepare": "husky install"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/requestly/requestly-browser-extension.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/requestly/requestly-browser-extension/issues"
+  },
+  "homepage": "https://gitlab.com/requestly/requestly-browser-extension#README",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "husky": "^6.0.0",
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "dependencies": {},
+  "files": [
+    "index.js",
+    "config.js",
+    "common/*",
+    "components/rule-processor/dist/*"
+  ]
+}
