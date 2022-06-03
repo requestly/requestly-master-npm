@@ -11,7 +11,7 @@
   ],
   "collectExtUsageStats": true,
   "env": "dummy",
-  "WEB_URL": "http://localhost:3000",
+  "WEB_URL": "https://app.requestly.io",
   "firebaseConfig": {
     "apiKey": "xx",
     "authDomain": "xx",
