@@ -63,6 +63,8 @@ CONSTANTS.MOCK_URL = CONFIGS.WEB_URL + "/mock/";
 
 CONSTANTS.DESKTOP_APP_URL = CONFIGS.WEB_URL + "/desktop/intercept-traffic";
 
+CONSTANTS.CONSOLE_LOGGER_ENABLED = "console-logger-enabled";
+
 /**
  * We are calling them as BLACK_LIST_DOMAINS
  * however the usage is code is as the URL containing these substrings, We don't touch those requests
@@ -102,6 +104,7 @@ CONSTANTS.RULE_TYPES = {
   SCRIPT: "Script",
   QUERYPARAM: "QueryParam",
   RESPONSE: "Response",
+  REQUEST: "Request",
   DELAY: "Delay",
 };
 
@@ -246,6 +249,10 @@ CONSTANTS.CLIENT_MESSAGES = {
   GET_USER_AGENT_RULE_PAIRS: "getUserAgentRulePairs",
   OVERRIDE_RESPONSE: "overrideResponse",
   NOTIFY_RULES_APPLIED: "notifyRulesApplied",
+  PRINT_CONSOLE_LOGS: "printConsoleLogs",
+  GET_SESSION_RECORDING_CONFIG: "getSessionRecordingConfig",
+  IS_RECORDING_SESSION: "isRecordingSession",
+  GET_TAB_SESSION: "getTabSession",
 };
 
 CONSTANTS.EXTENSION_MESSAGES = {
@@ -254,7 +261,10 @@ CONSTANTS.EXTENSION_MESSAGES = {
   CLEAR_LOGS_FOR_TAB: "clearLogsForTab",
   CLEAR_LOGS_FOR_DOMAIN: "clearLogsForDomain",
   GET_FAVOURITE_RULES: "getFavouriteRules",
+  GET_PINNED_GROUPS: "getPinnedGroups",
+  GET_ALL_RULES: "getAllRules",
   GET_FLAGS: "getFlags",
+  GET_TAB_SESSION: "getTabSession",
 };
 
 CONSTANTS.HEADERS_TARGET = {
@@ -291,6 +301,11 @@ CONSTANTS.SCRIPT_LIBRARIES = {
   },
 };
 
+CONSTANTS.REQUEST_BODY_TYPES = {
+  STATIC: "static",
+  CODE: "code",
+};
+
 CONSTANTS.RESPONSE_BODY_TYPES = {
   STATIC: "static",
   CODE: "code",
@@ -305,6 +320,7 @@ CONSTANTS.STORAGE_KEYS = {
   REQUESTLY_SETTINGS: "rq_settings",
   USER_INFO: "user_info",
   LATEST_NOTIFICATION_READ_BY_USER: "latestNotificationReadId",
+  SESSION_RECORDING_CONFIG: "sessionRecordingConfig",
 };
 
 CONSTANTS.MESSAGES = {
@@ -530,6 +546,11 @@ CONSTANTS.MESSAGE_HANDLER = {
   SINKS: {
     CUSTOMERLY: "customerly",
   },
+};
+
+CONSTANTS.REQUEST_STATE = {
+  LOADING: "LOADING",
+  COMPLETE: "COMPLETE",
 };
 
 CONSTANTS.getSharedListURL = function (shareId, sharedListName) {

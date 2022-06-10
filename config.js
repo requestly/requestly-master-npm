@@ -24,7 +24,7 @@
   "stripeConfig": {
     "publishableKey": "xx"
   },
-  "version": "22.1.18"
+  "version": "22.6.9"
 };
   if (isReactApp) {
     /** For React App */
